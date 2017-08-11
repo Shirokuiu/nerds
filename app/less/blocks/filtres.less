@@ -1,0 +1,394 @@
+.filtres {
+  width: 260px;
+}
+
+.filtres__price {
+  .reset();
+  
+  border: none;
+}
+
+.filtres__price-headline {
+  margin-bottom: 49px;
+  
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.filtres__price-wrap {
+  width: 260px;
+}
+
+.filtres__range-controls {
+  position: relative;
+  
+  display: flex;
+  height: 80px;
+  margin-bottom: 14px;
+  
+  background-color: #efefef;
+}
+
+.filtres__price-scale {
+  width: 219px;
+  height: 2px;
+  margin: auto;
+  
+  background-color: #d7dcde;
+}
+
+.filtres__price-bar {
+  width: 152px;
+  height: 2px;
+  
+  background-color: #00cb75;
+}
+
+.filtres__price-toggle {
+  position: absolute;
+  
+  width: 5px;
+  height: 4px;
+  
+  background-color: #acacac;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 4px 0 #dbdbdb;
+  
+  cursor: pointer;
+  &--min {
+    top: 29px;
+    left: 18px;
+  }
+  &--max {
+    top: 29px;
+    right: 78px;
+  }
+}
+
+.filtres__price-controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filtres__price-items {
+  width: 115px;
+  input {
+    width: 60px;
+    margin-left: 10px;
+    padding: 8px 10px;
+    
+    color: #283136;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: center;
+    
+    border: none;
+    border-radius: 3px;
+    background-color: #efefef;
+  }
+  &--max-price {
+   text-align: right;
+  }
+}
+
+.filtres__grid {
+  .reset();
+  
+  margin-top: 59px;
+  margin-bottom: 42px;
+  
+  border: none;
+}
+
+.filtres__grid-headline {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.filtres__grid-list {
+  .reset();
+  
+  list-style: none;
+}
+
+.filtres__grid-item {
+  position: relative;
+  
+  padding-left: 36px;
+  
+  line-height: 20px;
+  
+  cursor: pointer;
+  &:hover {
+    color: #000000;
+  }
+  &:active {
+    color: rgba(40, 49, 54, 0.3);
+  }
+  input[type="radio"] {
+    display: none;
+    &:checked + .filtres__grid-radio-indicator::before {
+      content: "";
+      
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      
+      width: 7px;
+      height: 7px;
+      
+      background-color: #b7b7b7;
+      border-radius: 50%;
+      &:hover {
+        background-color: #4c4c4c;
+      }
+    }
+  }
+  .filtres__grid-radio-indicator {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    
+    width: 17px;
+    height: 17px;
+    
+    border: 3px solid #b7b7b7;
+    border-radius: 50%;
+  }
+}
+
+.filtres__checkbox {
+  .reset();
+  
+  border: none;
+}
+
+.filtres__checkbox-headline {
+  margin-bottom: 14px;
+  
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+}
+
+.filtres__checkbox-list {
+  .reset();
+  
+  list-style: none;
+}
+
+.filtres__checkbox-items {
+  margin-bottom: 21px;
+}
+
+.filtres__checkbox-item {
+  position: relative;
+  
+  padding-left: 37px;
+  
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  
+  cursor: pointer;
+  input[type="checkbox"] {
+    display: none;
+    &:checked + .filtres__checkbox-indicator::before {
+      content: "";
+      
+      position: absolute;
+      top: 0;
+      left: 0;
+      
+      width: 27px;
+      height: 23px;
+      
+      background: url(../img/checkbox-on.jpg) no-repeat;
+    }
+  }
+}
+
+.filtres__checkbox-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  width: 23px;
+  height: 23px;
+  
+  background: url(../img/checkbox-off-png.png) no-repeat;
+}
+
+.filtres__button {
+  .reset();
+  
+  width: 100%;
+  padding: 17px 5px;
+  
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  color: rgb(0, 0, 0);
+  
+  border: none;
+  outline: none;
+  cursor: pointer;
+  
+  background-color: #efefef;
+  &:hover {
+    background-color: rgb(223, 223, 223);
+  }
+  &:active {
+    box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+    background-color: rgb(213, 213, 213);
+    color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media (max-width: 1200px) {
+  .filtres {
+    width: auto;
+  }
+  
+  .filtres__form {
+    position: relative;
+    
+    display: flex;
+    justify-content: space-between;
+    
+    margin-bottom: 61px;
+  }
+  
+  .filtres__grid {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  .filtres__grid-headline {
+    margin-bottom: 39px;
+  }
+  
+  .filtres__grid-items {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  .filtres__button {
+    position: absolute;
+    bottom: -16px;
+    left: 0;
+    
+    width: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .filtres {
+    margin-bottom: 48px;
+  }
+  
+  .filtres__form {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .filtres__price {
+    width: 8%;
+    margin-right: 100px;
+  }
+  
+  .filtres__grid {
+    width: 27%;
+  }
+  
+  .filtres__checkbox {
+    margin-top: 45px;
+  }
+  
+  .filtres__checkbox-list {
+    display: flex;
+  }
+  
+  .filtres__checkbox-indicator {
+    left: 7px;
+  }
+  
+  .filtres__button {
+    bottom: -65px;
+    left: 66px;
+  }
+}
+
+@media (max-width: 580px) {
+  .filtres__price {
+    margin-right: 22px;
+  }
+  
+  .filtres__checkbox-list {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 500px) {
+  .filtres__price {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 39px;
+  }
+  
+  .filtres__price-headline {
+    text-align: center;
+  }
+  
+  .filtres__price-wrap {
+    margin: 0 auto;
+  }
+  
+  .filtres__grid {
+    width: 100%;
+  }
+  
+  .filtres__grid-headline {
+    text-align: center;
+  }
+  
+  .filtres__grid-list {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .filtres__grid-item .filtres__grid-radio-indicator {
+    left: 8px;
+  }
+  
+  .filtres__checkbox-headline {
+    text-align: center;
+  }
+}
+
+@media (max-width: 425px) {
+  .filtres__grid-list {
+    flex-direction: column;
+  }
+  
+  .filtres__button {
+    left: 0;
+    right: 0;
+    
+    margin: auto;
+  }
+}

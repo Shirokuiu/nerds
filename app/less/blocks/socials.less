@@ -1,0 +1,141 @@
+.socials {
+  display: flex;
+  align-items: center;
+  
+  padding-bottom: 67px;
+}
+
+.socials__link {
+  display: flex;
+  flex-basis: 270px;
+  
+  margin-right: 129px;
+}
+
+.socials__link-btn {
+  position: relative;
+  
+  display: block;
+  width: 78px;
+  height: 78px;
+  margin-right: 12px;
+  
+  background-color: #e2e2e2;
+  border-radius: 50%;
+  &:last-child {
+    margin-right: 0;
+  }
+  &:hover {
+    background-color: #e74246;
+  }
+  &:active {
+    box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+    background-color: #d7373b;
+  }
+  &::before {
+    content: "";
+    
+    position: absolute;
+    top: 31px;
+    left: 24px;
+    
+    width: 26px;
+    height: 15px;
+    
+    background-image: url(../img/socials__vk-img.png);
+    background-repeat: no-repeat;
+  }
+  &--fb::before {
+    top: 27px;
+    left: 32px;
+    
+    width: 12px;
+    height: 22px;
+    
+    background-image: url(../img/socials__fb-img.png);
+    background-repeat: no-repeat;
+  }
+  &--inst::before {
+    top: 28px;
+    left: 29px;
+    
+    width: 21px;
+    height: 21px;
+    
+    background-image: url(../img/socials__inst-img.png);
+    background-repeat: no-repeat;
+  }
+  &:active::before {
+    opacity: 0.3;
+  }
+}
+
+.socials__description-headline {
+  .reset();
+  
+  margin-bottom: 8px;
+  
+  color: #000000;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 36px;
+}
+
+.socials__description-text {
+  .reset();
+  
+  color: #444444;
+  line-height: 22px;
+}
+
+@media (max-width: 1024px) {
+  .socials {
+    padding-bottom: 25px;
+  }
+  
+  .socials__description-headline {
+    font-size: 23px;
+    line-height: 25px
+  }
+  
+  .socials__link-btn {
+    width: 58px;
+    height: 58px;
+    &::before {
+      top: 22px;
+      left: 15px;
+    }
+    &--fb::before {
+      top: 18px;
+      left: 21px;
+    }
+    &--inst::before {
+      top: 18px;
+      left: 18px;
+    }
+  }
+}
+
+@media (max-width: 810px) {
+  .socials__link {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 660px) {
+  .socials__link {
+    justify-content: space-between;
+    
+    margin: 0 auto;
+  }
+  
+  .socials__description {
+    display: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .socials__link {
+    justify-content: space-around;
+  }
+}

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Магазин</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="container">
+        <nav class="main-nav">
+          <div class="main-nav__logo"><a href="index.html" class="main-nav__logo-link"><img src="img/logo-img.png" alt=""></a></div>
+          <button class="main-nav__list-button" type="button">Кнопка</button>
+          <ul class="main-nav__list">
+            <li class="main-nav__items"><a href="index.html" class="main-nav__item">Студия</a></li>
+            <li class="main-nav__items"><a href="" class="main-nav__item">Клиенты</a></li>
+            <li class="main-nav__items"><a class="main-nav__item main-nav__item--active">Магазин</a></li>
+            <li class="main-nav__items"><a href="" class="main-nav__item">Контакты</a></li>
+          </ul>
+          <div class="main-nav__user-block">
+            <a href="" class="main-nav__user-basket">Корзина</a>
+          </div>
+        </nav>
+        <h1 class="catalog-headline">Магазин готовых шаблонов</h1>
+      </div>
+    </header>
+    <main class="main-content">
+      <div class="container catalog-content">
+        <div class="filtres">
+          <form action="academy.php" method="post" class="filtres__form">
+            <fieldset class="filtres__price">
+              <legend class="filtres__price-headline">Стоимость:</legend>
+              <div class="filtres__price-wrap">
+                <div class="filtres__range-controls">
+                  <div class="filtres__price-scale">
+                    <div class="filtres__price-bar"></div>
+                  </div>
+                  <div class="filtres__price-toggle filtres__price-toggle--min"></div>
+                  <div class="filtres__price-toggle filtres__price-toggle--max"></div>
+                </div>
+                <div class="filtres__price-controls">
+                  <label class="filtres__price-items filtres__price-items--min-price">от
+                    <input type="text" name="price-min" value="0">
+                  </label>
+                  <label class="filtres__price-items filtres__price-items--max-price">до
+                    <input type="text" name="price-max" value="15000">
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="filtres__grid">
+              <legend class="filtres__grid-headline">Сетка:</legend>
+              <ul class="filtres__grid-list">
+                <li class="filtres__grid-items">
+                  <label class="filtres__grid-item">
+                    <input type="radio" name="radio-grid" checked>
+                    <span class="filtres__grid-radio-indicator"></span>
+                    Адаптивная
+                  </label>
+                </li>
+                <li class="filtres__grid-items">
+                  <label class="filtres__grid-item">
+                    <input type="radio" name="radio-grid">
+                    <span class="filtres__grid-radio-indicator"></span>
+                    Фиксированная
+                  </label>
+                </li>
+                <li class="filtres__grid-items">
+                  <label class="filtres__grid-item">
+                    <input type="radio" name="radio-grid">
+                    <span class="filtres__grid-radio-indicator"></span>
+                    Резиновая
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="filtres__checkbox">
+              <legend class="filtres__checkbox-headline">Особенности:</legend>
+              <ul class="filtres__checkbox-list">
+                <li class="filtres__checkbox-items">
+                  <label class="filtres__checkbox-item">
+                    <input type="checkbox" name="slider" checked>
+                    <span class="filtres__checkbox-indicator"></span>
+                    Слайдер
+                  </label>
+                </li>
+                <li class="filtres__checkbox-items">
+                  <label class="filtres__checkbox-item">
+                    <input type="checkbox" name="advantages">
+                    <span class="filtres__checkbox-indicator"></span>
+                    Блок преимуществ
+                  </label>
+                </li>
+                <li class="filtres__checkbox-items">
+                  <label class="filtres__checkbox-item">
+                    <input type="checkbox" name="news" checked>
+                    <span class="filtres__checkbox-indicator"></span>
+                    Новости
+                  </label>
+                </li>
+                <li class="filtres__checkbox-items">
+                  <label class="filtres__checkbox-item">
+                    <input type="checkbox" name="gallery">
+                    <span class="filtres__checkbox-indicator"></span>
+                    Галерея
+                  </label>
+                </li>
+                <li class="filtres__checkbox-items">
+                  <label class="filtres__checkbox-item">
+                    <input type="checkbox" name="basket-checkbox">
+                    <span class="filtres__checkbox-indicator"></span>
+                    Корзина
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <button class="filtres__button" type="button">Показать</button>
+          </form>
+        </div>
+        <div class="shop-carts">
+          <div class="shop-carts__nav">
+            <h2 class="shop-cart__nav-headline">Сортировать:</h2>
+            <div class="shop-cart__nav-list-wrap">
+              <ul class="shop-cart__nav-list">
+                <li class="shop-cart__nav-items"><a href="#" class="shop-cart__nav-link">По цене</a></li>
+                <li class="shop-cart__nav-items"><a href="#" class="shop-cart__nav-link">По типу</a></li>
+                <li class="shop-cart__nav-items"><a href="#" class="shop-cart__nav-link">По названию</a></li>
+              </ul>
+              <div class="shop-cart__nav-controls">
+                <button type="button" class="shop-cart__nav-arrow shop-cart__nav-arrow--down"></button>
+                <button type="button" class="shop-cart__nav-arrow shop-cart__nav-arrow--up"></button>
+              </div>
+            </div>
+          </div>
+          <div class="shop-carts__image">
+            <div class="shop-carts__image-cart">
+              <a href="" class="shop-carts__image-cart-link">
+                <div class="shop-carts__img-wrap">
+                  <img src="img/shop-cart-sedona__img.jpg" alt="">
+                </div>
+              </a>
+              <div class="shop-carts__image-cart-hover">
+                <h2 class="shop-carts__image-cart-hover-headline">Sedona</h2>
+                <p class="shop-carts__image-cart-hover-text">Информационный сайт для туристов</p>
+                <a href="#" class="shop-carts__image-cart-hover-link">9 900 руб.</a>
+              </div>
+            </div>
+            <div class="shop-carts__image-cart">
+              <a href="" class="shop-carts__image-cart-link">
+                <div class="shop-carts__img-wrap">
+                  <img src="img/shop-cart-pink__img.jpg" alt="">
+                </div>
+              </a>
+              <div class="shop-carts__image-cart-hover">
+                <h2 class="shop-carts__image-cart-hover-headline">Pink App</h2>
+                <p class="shop-carts__image-cart-hover-text">Продуктовый лендинг приложения для iOS и Android</p>
+                <a href="#" class="shop-carts__image-cart-hover-link">9 900 руб.</a>
+              </div>
+            </div>
+            <div class="shop-carts__image-cart">
+              <a href="" class="shop-carts__image-cart-link">
+                <div class="shop-carts__img-wrap">
+                  <img src="img/shop-cart-borodinskii__img.jpg" alt="">
+                </div>
+              </a>
+              <div class="shop-carts__image-cart-hover">
+                <h2 class="shop-carts__image-cart-hover-headline">Barbershop</h2>
+                <p class="shop-carts__image-cart-hover-text">Сайт салоны красоты. Для мужчин, да.</p>
+                <a href="#" class="shop-carts__image-cart-hover-link">9 900 руб.</a>
+              </div>
+            </div>
+            <div class="shop-carts__image-cart">
+              <a href="" class="shop-carts__image-cart-link">
+                <div class="shop-carts__img-wrap">
+                  <img src="img/shop-cart-mishka__img.jpg" alt="">
+                </div>
+              </a>
+              <div class="shop-carts__image-cart-hover">
+                <h2 class="shop-carts__image-cart-hover-headline">Mishka</h2>
+                <p class="shop-carts__image-cart-hover-text">Интернет-магазин вязаных игрушек</p>
+                <a href="#" class="shop-carts__image-cart-hover-link">9 900 руб.</a>
+              </div>
+            </div>
+            <div class="shop-carts__image-cart">
+              <a href="" class="shop-carts__image-cart-link">
+                <div class="shop-carts__img-wrap">
+                  <img src="img/shop-cart-learn__img.jpg" alt="">
+                </div>
+              </a>
+              <div class="shop-carts__image-cart-hover">
+                <h2 class="shop-carts__image-cart-hover-headline">A Plus</h2>
+                <p class="shop-carts__image-cart-hover-text">Лендинг курсов повышения квалификации</p>
+                <a href="#" class="shop-carts__image-cart-hover-link">9 900 руб.</a>
+              </div>
+            </div>
+            <div class="shop-carts__image-cart">
+              <a href="" class="shop-carts__image-cart-link">
+                <div class="shop-carts__img-wrap">
+                  <img src="img/shop-cart-cvas__img.jpg" alt="">
+                </div>
+              </a>
+              <div class="shop-carts__image-cart-hover">
+                <h2 class="shop-carts__image-cart-hover-headline">Кваст</h2>
+                <p class="shop-carts__image-cart-hover-text">Промо-сайт производителя крафтового кваса</p>
+                <a href="#" class="shop-carts__image-cart-hover-link">9 900 руб.</a>
+              </div>
+            </div>
+          </div>
+          <div class="paginator">
+            <a href="" class="paginator__links paginator__links--active">1</a>
+            <a href="" class="paginator__links">2</a>
+            <a href="" class="paginator__links">3</a>
+            <a href="" class="paginator__links paginator__links--next">Следующая</a>
+          </div>
+        </div>
+      </div>
+      <div class="map">
+        <div class="container">
+          <div class="map__description-wrap">
+            <div class="map__description">
+              <h2 class="map__description-headline">NЁRDS DESIGN STUDIO</h2>
+              <p class="map__description-text">191186, Санкт-Петербург, 
+  ул. Б. Конюшенная, д. 19/8</p>
+              <span class="map__description-tel">тел.<a href="tel:+7(812)275-75-75" class="map__description-tel-link">+7 (812) 275-75-75</a></span>
+              <a href="" class="map__description-link">Напишите нам</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="socials">
+          <div class="socials__link">
+            <a href="" class="socials__link-btn socials__link-btn--vk"></a>
+            <a href="" class="socials__link-btn socials__link-btn--fb"></a>
+            <a href="" class="socials__link-btn socials__link-btn--ins"></a>
+          </div>
+          <div class="socials__description">
+            <h2 class="socials__description-headline">Давайте дружить, это выгодно!</h2>
+            <p class="socials__description-text">Скидка 10% для друзей из социальных сетей.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

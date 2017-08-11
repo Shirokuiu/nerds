@@ -1,0 +1,33 @@
+.commercial {
+  display: flex;
+  justify-content: space-around;
+  
+  margin-bottom: 81px;
+  padding: 45px 0;
+  
+  border-bottom: 2px solid #eeeeee;
+}
+
+.commercial__link {
+  display: block;
+  
+  opacity: 0.2;
+  &:hover {
+    opacity: 1;
+  }
+  &:active {
+    opacity: 0.1;
+  }
+}
+
+@media (max-width: 1024px) {
+  .commercial {
+    margin-bottom: 42px;
+  }
+}
+
+@media (max-width: 425px) {
+  .commercial {
+    display: none;
+  }
+}

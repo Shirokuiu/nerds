@@ -1,0 +1,144 @@
+.services {
+  display: flex;
+  justify-content: space-between;
+  
+  margin-bottom: 78px;
+  padding-bottom: 79px;
+  
+  border-bottom: 2px solid #eeeeee;
+}
+
+.services__cart {
+  display: flex;
+  flex-direction: column;
+  
+  width: 300px;
+}
+
+.services__cart-img {
+  width: 300px;
+  height: 146px;
+  margin-bottom: 26px;
+}
+
+.services__cart-headline {
+  .reset();
+  
+  margin-bottom: 19px;
+  
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #000000;
+}
+
+.services__cart-text {
+  .reset();
+  
+  margin-bottom: 32px;
+}
+
+.services__cart-link {
+  width: 160px;
+  margin-top: auto;
+  padding: 15px 5px;
+  
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  
+  background-color: #fb565a;
+  border-radius: 3px;
+  &:hover {
+    background-color: #e74246;
+  }
+  &:active {
+    box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+    background-color: #d7373b;
+    color: rgba(255, 255, 255, 0.3);
+  }
+  &--green {
+    background-color: #00ca74;
+    &:hover {
+      background-color: #00bc6c;
+    }
+    &:active {
+      box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+      background-color: #00aa62;
+    }
+  }
+  &--yellow {
+    background-color: #efc84a;
+    &:hover {
+      background-color: #eab534;
+    }
+    &:active {
+      box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+      background-color: #e5a722;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .services {
+    flex-direction: column;
+    
+    margin-bottom: 40px;
+    padding-bottom: 47px;
+  }
+  
+  .services__cart {
+    position: relative;
+    
+    margin-left: 350px;
+    margin-bottom: 38px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  .services__cart-img {
+    position: absolute;
+    top: 0;
+    left: -350px;
+  }
+  
+  .services__cart-headline {
+    margin-bottom: 5px;
+  }
+  
+  .services__cart-text {
+    margin-bottom: 9px;
+  }
+}
+
+@media (max-width: 768px) {
+  .services {
+    align-items: center;
+  }
+  
+  .services__cart {
+    margin-left: 0;
+  }
+  
+  .services__cart-img {
+    position: static;
+  }
+}
+
+@media (max-width: 425px) {
+  .services__cart {
+    width: 290px;
+  }
+  
+  .services__cart-img {
+    width: 290px;
+  }
+  
+  .services__cart-link {
+    align-self: center;
+  }
+}

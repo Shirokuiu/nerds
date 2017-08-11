@@ -1,0 +1,270 @@
+.shop-carts {
+  width: 760px;
+}
+
+.shop-carts__nav {
+  display: flex;
+  justify-content: space-between;
+  
+  margin-bottom: 89px;
+}
+
+.shop-cart__nav-headline {
+  .reset();
+  
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+}
+
+.shop-cart__nav-list-wrap {
+  display: flex;
+  justify-content: space-between;
+  
+  width: 360px;
+}
+
+.shop-cart__nav-list {
+  .reset();
+  
+  display: flex;
+  justify-content: space-between;
+  
+  width: 280px;
+  
+  list-style: none;
+}
+
+.shop-cart__nav-link {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.3);
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+  &:active {
+    color: rgba(0, 0, 0, 1);
+  }
+}
+
+.shop-cart__nav-controls {
+  display: flex;
+  justify-content: space-between;
+  
+  width: 42px;
+}
+
+.shop-cart__nav-arrow {
+  .reset();
+  
+  align-self: center;
+  
+  width: 9px;
+  height: 9px;
+  
+  background: url(../img/sort-down.png) no-repeat;
+  
+  border: none;
+  outline: none;
+  
+  cursor: pointer;
+  &--up {
+    background: url(../img/sort-up.png) no-repeat;
+  }
+}
+
+.shop-carts__image {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.shop-carts__image-cart {
+  position: relative;
+  
+  width: 360px;
+  height: 576px;
+  margin-bottom: 68px;
+  &:hover .shop-carts__image-cart-hover {
+    display: block;
+  }
+}
+
+.shop-carts__img-wrap {
+  height: 576px;
+}
+
+.shop-carts__image-cart-link {
+  position: relative;
+  
+  display: block;
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: -39px;
+    left: 1px;
+
+    width: 358px;
+    height: 40px;
+
+    background: url(../img/shop-cart__top-line.png) no-repeat;
+  }
+  &:hover::before {
+    background: url(../img/shop-cart__top-line-hover.png) no-repeat;
+  }
+  &:hover {
+    box-shadow: 0 6px 15px rgba(0, 1, 1, 0.25);  
+  }
+}
+
+.shop-carts__image-cart-hover {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  
+  display: none;
+  width: 360px;
+  height: 199px;
+  padding-top: 32px;
+ 
+  
+  background-color: #eeeeee;
+}
+
+.shop-carts__image-cart-hover-headline {
+  .reset();
+  
+  margin-bottom: 21px;
+  
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+}
+
+.shop-carts__image-cart-hover-text {
+  .reset();
+  
+  margin-bottom: 29px;
+  
+  text-align: center;
+  line-height: 18px;
+  color: rgb(102, 102, 102);
+}
+
+.shop-carts__image-cart-hover-link {
+  display: block;
+  max-width: 200px;
+  margin: 0 auto;
+  padding: 17px 5px;
+  
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  
+  background-color: rgb(251, 86, 90);
+  border-radius: 3px;
+  &:hover {
+    background-color: rgb(231, 66, 70);
+  }
+  &:active {
+    box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
+    background-color: rgb(215, 55, 59);
+  }
+}
+
+@media (max-width: 1200px) {
+  .shop-carts {
+    width: auto;
+  }
+  
+  .shop-carts__image {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 790px) {
+  .shop-carts__image-cart {
+    width: 270px;
+    height: 432px;
+  }
+  
+  .shop-carts__image-cart-link {
+    &::before {
+      width: 270px;
+    }
+  }
+  
+  .shop-carts__img-wrap {
+    height: 432px;
+  }
+  
+  .shop-carts__image-cart-hover {
+    width: 270px;
+  }
+}
+
+@media (max-width: 768px) {
+  .shop-carts__nav {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 580px) {
+  .shop-carts__nav {
+    flex-direction: column; 
+  }
+  
+  .shop-cart__nav-headline {
+    margin-bottom: 21px;
+    
+    text-align: center;
+  }
+  
+  .shop-cart__nav-list-wrap {
+    align-self: center;
+  }
+  
+  .shop-carts__image-cart {
+    width: 200px;
+    height: 308px;
+  }
+  
+  .shop-carts__image-cart-link::before {
+    width: 200px;
+  }
+  
+  .shop-carts__img-wrap {
+    height: 308px;
+  }
+  
+  .shop-carts__image-cart-hover {
+    bottom: -7px;
+    
+    width: 200px;
+    height: 187px;
+    padding-top: 12px;
+  }
+}
+
+@media (max-width: 425px) {
+  .shop-cart__nav-controls {
+    display: none;
+  }
+  
+  .shop-cart__nav-list-wrap {
+    width: auto;
+  }
+}
