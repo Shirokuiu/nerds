@@ -811,14 +811,23 @@ body {
             flex-direction: column;
     margin-top: 25px;
   }
+  .main-nav__list--vissible {
+    display: block;
+  }
   .main-nav__items {
     margin-right: 0;
   }
   .main-nav__item {
     border-bottom-color: transparent;
   }
-  .main-nav__user-basket {
+  .main-nav__user-block {
     display: none;
+  }
+  .main-nav__user-block--vissible {
+    display: block;
+  }
+  .main-nav__user-basket {
+    display: block;
     margin-left: -45px;
   }
 }
